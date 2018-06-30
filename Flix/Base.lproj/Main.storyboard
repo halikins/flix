@@ -131,6 +131,7 @@
                     <connections>
                         <outlet property="backdropView" destination="Sbm-fb-9ie" id="wlk-Ch-bs2"/>
                         <outlet property="posterView" destination="3Gv-Gu-Bwe" id="euY-Ni-c5p"/>
+                        <outlet property="scrollView" destination="baA-0K-KeQ" id="MVh-Fw-VXt"/>
                         <outlet property="synopsisLabel" destination="2ir-wh-0D3" id="iiQ-WI-mVa"/>
                         <outlet property="titleLabel" destination="R0g-hH-lgI" id="ctA-lX-8Rb"/>
                     </connections>
@@ -143,7 +144,7 @@
         <scene sceneID="RFo-TJ-XQN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WZs-pO-FKn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Now Playing" image="now_playing_tabbar_item" selectedImage="now_playing_tabbar_item" id="8JQ-du-7G1"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="reel_tabbar_icon" selectedImage="reel_tabbar_icon" id="8JQ-du-7G1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VTL-aC-H1C">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -158,11 +159,11 @@
             </objects>
             <point key="canvasLocation" x="205.59999999999999" y="690.40479760119945"/>
         </scene>
-        <!--Poster-->
+        <!--Movies-->
         <scene sceneID="dnP-rD-fBh">
             <objects>
                 <navigationController id="uXM-O8-oEL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Poster" image="reel_tabbar_icon" selectedImage="reel_tabbar_icon" id="bgY-l9-pak"/>
+                    <tabBarItem key="tabBarItem" title="Movies" image="superhero_tabbar_item" selectedImage="superhero_tabbar_item" id="bgY-l9-pak"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WLb-3i-SVH">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -173,7 +174,41 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B22-9s-0bY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="690"/>
+            <point key="canvasLocation" x="1862" y="690"/>
+        </scene>
+        <!--Genres-->
+        <scene sceneID="WIB-hK-dZP">
+            <objects>
+                <navigationController id="XTw-UM-EdH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Genres" image="ticket_tabbar_icon" selectedImage="ticket_tabbar_icon" id="tjG-vA-KzZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="itW-Av-Bw5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bEl-03-S8e" kind="relationship" relationship="rootViewController" id="pO6-0u-8J2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q4h-7u-fam" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2638" y="690"/>
+        </scene>
+        <!--TV Series-->
+        <scene sceneID="h6p-Sb-bA3">
+            <objects>
+                <navigationController id="RNn-sn-sBU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TV Series" image="projector_tabbar_item" selectedImage="projector_tabbar_item" id="RfF-mq-Ftc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9aT-Oj-lrR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="o7N-IS-tTX" kind="relationship" relationship="rootViewController" id="A8u-6p-246"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iUP-hP-AZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="690"/>
         </scene>
         <!--Movies Grid View Controller-->
         <scene sceneID="5Td-Sh-WjP">
@@ -202,8 +237,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2PK-at-daT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="124" height="175"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="134" height="190"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -215,6 +250,7 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="3eN-aM-Qpl"/>
                     </view>
                     <navigationItem key="navigationItem" id="Lo3-F3-6WE"/>
@@ -224,7 +260,114 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Zr-I6-qF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720.8" y="1506.296851574213"/>
+            <point key="canvasLocation" x="1861.5999999999999" y="1506.296851574213"/>
+        </scene>
+        <!--Genre View Controller-->
+        <scene sceneID="oOH-gk-aRi">
+            <objects>
+                <viewController id="bEl-03-S8e" customClass="GenreViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Udw-gV-fmg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2018-06-29 at 3.38.12 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rxb-nx-how">
+                                <rect key="frame" x="0.0" y="250" width="130" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2018-06-29 at 3.37.31 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Kt-Lq-kC9">
+                                <rect key="frame" x="0.0" y="64" width="130" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2018-06-29 at 3.37.54 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="you-u4-G9F">
+                                <rect key="frame" x="130" y="64" width="130" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2018-06-29 at 3.38.06 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="sx4-d4-Eg3">
+                                <rect key="frame" x="261" y="64" width="130" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2018-06-29 at 3.38.17 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="jCM-LZ-QzL">
+                                <rect key="frame" x="130" y="250" width="130" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2018-06-29 at 3.38.23 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="AZI-7p-YtK">
+                                <rect key="frame" x="261" y="250" width="114" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2018-06-29 at 3.38.28 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="zNA-UY-pbp">
+                                <rect key="frame" x="0.0" y="440" width="130" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2018-06-29 at 3.38.34 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="nBl-cB-etv">
+                                <rect key="frame" x="130" y="440" width="130" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2018-06-29 at 3.38.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="aDG-Xx-05g">
+                                <rect key="frame" x="261" y="440" width="117" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NOU-bh-YCP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZL4-sc-Y6S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hk-5j-Xi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2637.5999999999999" y="1506.296851574213"/>
+        </scene>
+        <!--Movies Grid View Controller2-->
+        <scene sceneID="C3G-ZE-ZgH">
+            <objects>
+                <collectionViewController id="o7N-IS-tTX" customClass="MoviesGridViewController2" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="VWm-c6-tR5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="C0x-iZ-T8z">
+                            <size key="itemSize" width="124" height="175"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <view key="backgroundView" contentMode="scaleToFill" id="yo8-cV-bx6">
+                            <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <gestureRecognizers/>
+                        </view>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionCell" id="opl-k8-CJo" customClass="MovieCollectionCell">
+                                <rect key="frame" x="0.0" y="0.0" width="124" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="124" height="175"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Zw-Os-xZP">
+                                            <rect key="frame" x="0.0" y="0.0" width="122" height="170"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="posterView" destination="9Zw-Os-xZP" id="0Ge-Rg-oAe"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="o7N-IS-tTX" id="BeU-4L-VPT"/>
+                            <outlet property="delegate" destination="o7N-IS-tTX" id="iv0-aN-rBk"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="XZq-7v-iuF"/>
+                    <connections>
+                        <outlet property="collectionView2" destination="VWm-c6-tR5" id="awt-LA-myj"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSt-u3-U8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032.8" y="1506.296851574213"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Uih-cU-pT8">
@@ -239,15 +382,28 @@
                     <connections>
                         <segue destination="WZs-pO-FKn" kind="relationship" relationship="viewControllers" id="7aX-Th-PUd"/>
                         <segue destination="uXM-O8-oEL" kind="relationship" relationship="viewControllers" id="rD4-0b-IXj"/>
+                        <segue destination="RNn-sn-sBU" kind="relationship" relationship="viewControllers" id="uOe-FC-Mds"/>
+                        <segue destination="XTw-UM-EdH" kind="relationship" relationship="viewControllers" id="CGT-1t-0nA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZF5-YY-u6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="-101"/>
+            <point key="canvasLocation" x="1862" y="-171"/>
         </scene>
     </scenes>
     <resources>
-        <image name="now_playing_tabbar_item" width="21" height="21"/>
+        <image name="Screen Shot 2018-06-29 at 3.37.31 PM.png" width="420" height="420"/>
+        <image name="Screen Shot 2018-06-29 at 3.37.54 PM.png" width="506" height="348"/>
+        <image name="Screen Shot 2018-06-29 at 3.38.06 PM.png" width="512" height="344"/>
+        <image name="Screen Shot 2018-06-29 at 3.38.12 PM.png" width="506" height="344"/>
+        <image name="Screen Shot 2018-06-29 at 3.38.17 PM.png" width="504" height="342"/>
+        <image name="Screen Shot 2018-06-29 at 3.38.23 PM.png" width="506" height="342"/>
+        <image name="Screen Shot 2018-06-29 at 3.38.28 PM.png" width="504" height="364"/>
+        <image name="Screen Shot 2018-06-29 at 3.38.34 PM.png" width="506" height="346"/>
+        <image name="Screen Shot 2018-06-29 at 3.38.41 PM.png" width="504" height="400"/>
+        <image name="projector_tabbar_item" width="21" height="25"/>
         <image name="reel_tabbar_icon" width="25" height="25"/>
+        <image name="superhero_tabbar_item" width="21" height="23"/>
+        <image name="ticket_tabbar_icon" width="25" height="25"/>
     </resources>
 </document>

@@ -11,6 +11,7 @@
 @interface DetailsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backdropView;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *posterView;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -28,9 +29,9 @@
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
     [self.posterView setImageWithURL:posterURL];
     NSString *backdropURLString = self.movie[@"backdrop_path"];
-    NSString *fullBackdropURLString = [baseURLString stringByAppendingString:posterURLString];
+    NSString *fullBackdropURLString = [baseURLString stringByAppendingString:backdropURLString];
     
-    NSURL *backdropURL = [NSURL URLWithString:fullPosterURLString];
+    NSURL *backdropURL = [NSURL URLWithString:fullBackdropURLString];
     [self.backdropView setImageWithURL:backdropURL];
     
     self.titleLabel.text = self.movie[@"title"];
@@ -38,6 +39,8 @@
     
     [self.titleLabel sizeToFit];
     [self.synopsisLabel sizeToFit];
+    CGFloat maxHeight = self.synopsisLabel.frame.origin.y + self.synopsisLabel.frame.size.height + 40.0;
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, maxHeight);
 }
 
 - (void)didReceiveMemoryWarning {

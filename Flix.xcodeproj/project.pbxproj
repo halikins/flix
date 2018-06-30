@@ -20,6 +20,8 @@
 		2CB117B020E45ACD0004A402 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB117AF20E45ACD0004A402 /* DetailsViewController.m */; };
 		2CB117B320E553D30004A402 /* MoviesGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB117B220E553D30004A402 /* MoviesGridViewController.m */; };
 		2CB117B620E556F60004A402 /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB117B520E556F60004A402 /* MovieCollectionCell.m */; };
+		2CB117C220E5AAB20004A402 /* MoviesGridViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB117C120E5AAB20004A402 /* MoviesGridViewController2.m */; };
+		2CB117CA20E705800004A402 /* FlixsterGenreIcons in Resources */ = {isa = PBXBuildFile; fileRef = 2CB117C920E7057F0004A402 /* FlixsterGenreIcons */; };
 		889427ECA5BE9A34D4C86E2E /* libPods-Flix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D86A8F71B8DEC966578685FD /* libPods-Flix.a */; };
 		D92988E2596279A3FBC5EC83 /* libPods-FlixTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 323E6C8165D377E441410472 /* libPods-FlixTests.a */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,9 @@
 		2CB117B220E553D30004A402 /* MoviesGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesGridViewController.m; sourceTree = "<group>"; };
 		2CB117B420E556F60004A402 /* MovieCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionCell.h; sourceTree = "<group>"; };
 		2CB117B520E556F60004A402 /* MovieCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionCell.m; sourceTree = "<group>"; };
+		2CB117C020E5AAB20004A402 /* MoviesGridViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesGridViewController2.h; sourceTree = "<group>"; };
+		2CB117C120E5AAB20004A402 /* MoviesGridViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesGridViewController2.m; sourceTree = "<group>"; };
+		2CB117C920E7057F0004A402 /* FlixsterGenreIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FlixsterGenreIcons; path = ../../FlixsterGenreIcons; sourceTree = "<group>"; };
 		323E6C8165D377E441410472 /* libPods-FlixTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlixTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E301CDCE8E8A7D5103B5B6D /* Pods-FlixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlixTests/Pods-FlixTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FCDCFD77CC05E43CD8F2CE0 /* Pods-Flix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flix/Pods-Flix.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +135,7 @@
 		2CB1172820E3F22F0004A402 /* Flix */ = {
 			isa = PBXGroup;
 			children = (
+				2CB117C920E7057F0004A402 /* FlixsterGenreIcons */,
 				2CB1176020E409430004A402 /* Models */,
 				2CB1175F20E409380004A402 /* Views */,
 				2CB1175E20E409200004A402 /* View Controllers */,
@@ -171,6 +177,8 @@
 				2CB117AF20E45ACD0004A402 /* DetailsViewController.m */,
 				2CB117B120E553D30004A402 /* MoviesGridViewController.h */,
 				2CB117B220E553D30004A402 /* MoviesGridViewController.m */,
+				2CB117C020E5AAB20004A402 /* MoviesGridViewController2.h */,
+				2CB117C120E5AAB20004A402 /* MoviesGridViewController2.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -322,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB117CA20E705800004A402 /* FlixsterGenreIcons in Resources */,
 				2CB1173620E3F2300004A402 /* LaunchScreen.storyboard in Resources */,
 				2CB1173320E3F2300004A402 /* Assets.xcassets in Resources */,
 				2CB1173120E3F22F0004A402 /* Main.storyboard in Resources */,
@@ -408,6 +417,7 @@
 			files = (
 				2CB1173920E3F2300004A402 /* main.m in Sources */,
 				2CB117B020E45ACD0004A402 /* DetailsViewController.m in Sources */,
+				2CB117C220E5AAB20004A402 /* MoviesGridViewController2.m in Sources */,
 				2CB1172B20E3F22F0004A402 /* AppDelegate.m in Sources */,
 				2CB117B620E556F60004A402 /* MovieCollectionCell.m in Sources */,
 				2CB117AD20E44B860004A402 /* MovieCell.m in Sources */,
